@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>GuoXinyi_ProjectB</title>
+</head>
+<!--	Create the HTML5 'canvas' element in which we will run WebGL  -->
+
+<body onload="main()" onresize="drawResize()">
+	<canvas id="webgl" width="400" height="400">
+		Please use a browser that supports "canvas"
+	</canvas>
+	<p>
+
+		Current Quaternion: w + xi + yj + zk where (i,j,k) are 3-way imaginary numbers:
+		<div id=QuatValue>  X=0i, Y=0j, Z=0k, W=1. <br> length=1. </div>
+		<button type="button" onClick="resetQuat()">Reset</button>
+
+		<hr> <!-- Draw a horizontal-line separator------------->
+		Help Guide:<br>
+		1.keyborad Control:<br>
+		1) Arrow keys aim the camera without moving it: <br>
+		"←""→"arrow keys rotate view left/right; "↑""↓"arrow keys tilt up/down<br>
+		2) "WASD" keys move the camera without rotating it:<br>
+		A/D keys 'strafes' camera left/right at current altitude; W/S keys move forwards/backwords in direction-of-gaze<br>
+		3) "QE" keys move the camera up/down<br>
+		<br>
+		2.Mouse-Drag Control<br>
+		The diamond (octahedron) can respond to mouse-draging by qaternion rotation at all viewpoints.<br><br>
+		3.GUI control:<br>
+		1)Bamboo Dragonfly Rate for the speed of bamboo dragonfly<br>
+		2)Tree swing rate for swing speed of tree<br>
+		3)Cloak swing rate for swing speed of cloak<br>
+		4)Cloak length can control the length of cloak<br>
+		5)Tree direction can change the orientation of the tree<br>
+		<hr> <!-- Draw a horizontal-line separator------------->
+		Try keyboard & mouse click/drag inside the canvas, and:
+		<br>
+		<span id='KeyDownResult'> KeyDown: </span> <!-- myKeyDown() modifies this span object -->
+		<br>
+		<span id='KeyModResult'> KeyMod :<br><br> </span> <!-- myKeyDown() modifies this span object -->
+		<br>
+
+
+		<!--	Load in the JavaScript libraries supplied by our textbook 
+			(Matsuda et al., 2013 WebGL Programming Guide) that help us
+			with WebGL programming:
+	-->
+		<script src="lib/webgl-utils.js"></script>
+		<script src="lib/webgl-debug.js"></script>
+		<script src="lib/cuon-utils.js"></script>
+		<script src="lib/cuon-matrix-quat03.js"></script>
+		<script src="lib/dat.gui.js"></script>
+		<!--	Finally, load in our own JavaScript program file.
+	-->
+		<script src="GuoXinyi_ProjB.js"></script>
+</body>
+
+</html>

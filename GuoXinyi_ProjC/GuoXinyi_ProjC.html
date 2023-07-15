@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>GuoXinyi_ProjC</title>
+  </head>
+
+  <body onload="main()">
+    <canvas id="webgl" width="600" height="600">
+    Please use a browser that supports "canvas"
+    </canvas>
+    <hr> <!-- Draw a horizontal-line separator------------->
+		Help Guide:<br>
+		1.keyborad Control:<br>
+		1) Arrow keys aim the camera without moving it: <br>
+		"←""→"arrow keys rotate view left/right; "↑""↓"arrow keys tilt up/down<br>
+		2) "WASD" keys move the camera without rotating it:<br>
+		A/D keys 'strafes' camera left/right at current altitude; W/S keys move forwards/backwords in direction-of-gaze<br>
+		3) "QE" keys move the camera up/down<br>
+		<br>
+		2.GUI control:<br>
+    1) Use the drop-down box 'Lighting Method' to switch between Phong Lighting & Blinn-Phong Lighting.<br>
+    2) Use the drop-down box 'Shading Method' to switch between Gouraud Shading and Phong Shading.<br>
+    3) Use 'Sphere Rate' to control the spinning rate of sphere.<br>
+    4) Use  the drop-down box 'Sphere Material' to switch between different materials for sphere.<br>
+    5) Use the check boxes to switch on/off the whole light source or each light-source component separately.<br>
+    6) Use the sliders for 'Light Position' to control the light position X, Y, Z.<br>
+    7) Use the colormaps for 'Light Color' to set RGB values for each light component.<br>
+    <hr> <!-- Draw a horizontal-line separator------------->
+    Try keyboard & mouse click/drag inside the canvas, and:
+		<br>
+		<span id='KeyDownResult'> KeyDown: </span> <!-- myKeyDown() modifies this span object -->
+		<br>
+		<span id='KeyModResult'> KeyMod :<br><br> </span> <!-- myKeyDown() modifies this span object -->
+		<br>
+    <script src="lib/webgl-utils.js"></script>
+    <script src="lib/webgl-debug.js"></script>
+    <script src="lib/cuon-utils.js"></script>
+    <script src="lib/cuon-matrix-quat03.js"></script>
+    <script src="lib/materials_Ayerdi04.js"></script>
+		<script src="lib/lights-JT.js"></script>
+    <script src="lib/dat.gui.min.js"></script>
+<!-- YOU SHOULD UPGRADE to Brandon Jones' far-faster, 
+      far more complete vector/matrix/quaternion library: (Google it!) -->
+		<!-- <script src="../lib/glmatrix.js"></script> -->
+ 
+		<script src="XG_VBObox-Lib.js"></script>
+    <script src="GuoXinyi_ProjC.js"></script>
+  </body>
+</html>
